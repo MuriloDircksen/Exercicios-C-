@@ -1,0 +1,15 @@
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\bin\Debug\net7.0\ex1-2.exe
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\bin\Debug\net7.0\ex1-2.deps.json
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\bin\Debug\net7.0\ex1-2.runtimeconfig.json
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\bin\Debug\net7.0\ex1-2.dll
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\bin\Debug\net7.0\ex1-2.pdb
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\obj\Debug\net7.0\ex1-2.csproj.AssemblyReference.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\obj\Debug\net7.0\ex1-2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\obj\Debug\net7.0\ex1-2.AssemblyInfoInputs.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\obj\Debug\net7.0\ex1-2.AssemblyInfo.cs
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\obj\Debug\net7.0\ex1-2.csproj.CoreCompileInputs.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\obj\Debug\net7.0\ex1-2.dll
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\obj\Debug\net7.0\refint\ex1-2.dll
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\obj\Debug\net7.0\ex1-2.pdb
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\obj\Debug\net7.0\ex1-2.genruntimeconfig.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana3\ex1-2\obj\Debug\net7.0\ref\ex1-2.dll
