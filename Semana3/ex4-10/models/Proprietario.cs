@@ -8,8 +8,8 @@ namespace ex4_10.models
 {
     internal class Proprietario
     {
-        public string nome { get; set; }
-        public string cpf { get; set;}
+        public string Nome { get; set; }
+        public string Cpf { get; set;}
         public string Telefone { get; set;}
     }
 }
