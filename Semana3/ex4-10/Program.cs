@@ -61,9 +61,36 @@ namespace ex4_10
             Carros.Add(carro1);
             Carros.Add(carro2);
             Carros.Add(carro3);
-            CadastrarNovoCarro(Carros);
+
+            char opcao = ' ';
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("Bem vindos ao sistema de cadastro de carro!");
+                Console.WriteLine("Digite a opção que deseja executar:\n" +
+                    "1 - Cadastrar Carro\n" +
+                    "2 - Consultar Carros\n" +
+                    "3 - Sair");
+                opcao = char.Parse(Console.ReadLine());
+                switch (opcao)
+                {
+                    case '1':
+                        CadastrarNovoCarro(Carros);
+                        break;
+                    case '2':
+                        ApresentaDados(Carros);
+                        break;
+                    case '3':
+                        Console.WriteLine("Saindo do sistema!");
+                        break;
+                    default:
+                        Console.WriteLine("Dgite uma op~]ap válida!");
+                        break;
+                }
+            }while (opcao!= '3');
             
-            ApresentaDados(Carros);
+            
+            
         }
 
         static void CadastrarNovoCarro(List<Carro> Carros)
