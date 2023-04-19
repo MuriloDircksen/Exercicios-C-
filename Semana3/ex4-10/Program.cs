@@ -63,14 +63,12 @@ namespace ex4_10
             Carros.Add(carro3);
             CadastrarNovoCarro(Carros);
             
-            foreach(var carro in Carros)
-            {
-                Console.WriteLine(carro.Placa);
-            }
+            ApresentaDados(Carros);
         }
 
         static void CadastrarNovoCarro(List<Carro> Carros)
         {
+            
             Console.WriteLine("Cadastro novo carro.");
             Console.WriteLine("Digite o nome do Proprietario:");
             string nome = Console.ReadLine();
@@ -103,6 +101,15 @@ namespace ex4_10
                 Proprietario = proprietario
             };
             Carros.Add(carro);
+        }
+        static void ApresentaDados(List<Carro> carros)
+        {
+            Console.Clear();
+            foreach (var carro in carros)
+            {
+                Console.WriteLine($" Carro da marca {carro.Marca}, modelo {carro.Modelo}, cor {carro.Cor},\n " +
+                    $"pertence ao proprietario {carro.Proprietario.Nome}, cpf {carro.Proprietario.Cpf} e telefone {carro.Proprietario.Telefone}\n\n");
+            }
         }
     }
 }

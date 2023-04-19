@@ -14,4 +14,6 @@ namespace ex4_10.models
         public string Cor { get; set; }
         public Proprietario Proprietario { get; set; }
     }
+
+    
 }
