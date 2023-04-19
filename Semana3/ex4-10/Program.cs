@@ -1,4 +1,5 @@
 ﻿using ex4_10.models;
+using System.Reflection.PortableExecutable;
 
 namespace ex4_10
 {
@@ -29,6 +30,32 @@ namespace ex4_10
 
             };
 
+            var carro1 = new Carro()
+            {
+                Marca = "Fiat",
+                Modelo = "Palio 1.0",
+                Placa = "GTY6431",
+                Cor="Azul",
+                Proprietario = proprietario1
+            };
+
+            var carro2 = new Carro()
+            {
+                Marca = "Fiat",
+                Modelo = "Uno Mille",
+                Placa = "LWG9570",
+                Cor = "Vermelho",
+                Proprietario = proprietario2
+            };
+
+            var carro3 = new Carro()
+            {
+                Marca = "Volkswagen",
+                Modelo = "Fusca 78",
+                Placa = "FNW7297",
+                Cor = "Bege",
+                Proprietario = proprietario3
+            };
         }
     }
 }
