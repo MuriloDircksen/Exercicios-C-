@@ -56,6 +56,11 @@ namespace ex4_10
                 Cor = "Bege",
                 Proprietario = proprietario3
             };
+
+            var Carros = new List<Carro>();
+            Carros.Add(carro1);
+            Carros.Add(carro2);
+            Carros.Add(carro3);
         }
     }
 }
