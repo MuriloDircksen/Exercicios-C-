@@ -20,7 +20,7 @@ namespace ex3
 
         public string ExibirDados()
         {
-            return $"Conta: {_numero}, {_cliente.ToString()} ";
+            return $"Conta: {_numero}, {_cliente} ";
         }
 
         public void Depositar(double valor) { 
@@ -32,9 +32,9 @@ namespace ex3
             _banco.Saca(valor);
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            return ExibirDados()+", "+ _banco.ToString();
+            return ExibirDados()+", "+ _banco;
         }
     }
 }

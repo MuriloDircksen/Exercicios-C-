@@ -33,7 +33,7 @@ namespace ex3
             }
         }
 
-        public String ToString()
+        public override String ToString()
         {
             return $"Saldo: {_saldo.ToString("C")}";
         }

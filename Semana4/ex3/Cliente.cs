@@ -17,7 +17,7 @@ namespace ex3
             _cpf = cpf;
         }
 
-        public string ToString() {
+        public override string ToString() {
             return $"Nome: {_nome}, CPF: {_cpf}";
         }
     }
