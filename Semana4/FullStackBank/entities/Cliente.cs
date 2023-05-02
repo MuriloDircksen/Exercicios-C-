@@ -24,6 +24,11 @@ namespace FullStackBank.entities
         public decimal Saldo { get; set; }
         public string Endereco { get; set; }
 
+        public Cliente()
+        {
+
+        }
+
         protected Cliente(string nome, int numeroConta, string telefone, decimal saldo, string endereco)
         {
             Nome = nome;
