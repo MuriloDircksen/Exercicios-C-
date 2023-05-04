@@ -29,12 +29,11 @@ namespace FullStackBank.entities
 
         }
 
-        protected Cliente(string nome, int numeroConta, string telefone, decimal saldo, string endereco)
+        protected Cliente(string nome, string telefone, string endereco)
         {
             Nome = nome;
-            NumeroConta = numeroConta;
+            NumeroConta += 1;
             Telefone = telefone;
-            Saldo = saldo;
             Endereco = endereco;
         }
 

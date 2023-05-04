@@ -23,6 +23,19 @@ namespace FullStackBank.Services
 
         public void CadastroPF()
         {
+            //string nome, int numeroConta, string telefone, decimal saldo, string endereco, string cpf
+            Console.WriteLine("Entre com os  dados do Cliente:");
+            Console.WriteLine("Nome Completo:");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Telefone: ");
+            string telefone = Console.ReadLine();
+            Console.WriteLine("Endereço: ");
+            string endereco = Console.ReadLine();
+            Console.WriteLine("CPF: ");
+            string cpf = Console.ReadLine();
+
+            clientes.Add(new PessoaFisica(nome, telefone, endereco, cpf));
+
 
         }
         public void CadastroPJ() { }
