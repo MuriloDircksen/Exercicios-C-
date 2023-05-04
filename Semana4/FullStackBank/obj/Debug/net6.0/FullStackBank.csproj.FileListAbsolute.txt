@@ -1,0 +1,15 @@
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\obj\Debug\net6.0\FullStackBank.csproj.AssemblyReference.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\obj\Debug\net6.0\FullStackBank.GeneratedMSBuildEditorConfig.editorconfig
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\obj\Debug\net6.0\FullStackBank.AssemblyInfoInputs.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\obj\Debug\net6.0\FullStackBank.AssemblyInfo.cs
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\obj\Debug\net6.0\FullStackBank.csproj.CoreCompileInputs.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\bin\Debug\net6.0\FullStackBank.exe
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\bin\Debug\net6.0\FullStackBank.deps.json
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\bin\Debug\net6.0\FullStackBank.runtimeconfig.json
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\bin\Debug\net6.0\FullStackBank.dll
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\bin\Debug\net6.0\FullStackBank.pdb
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\obj\Debug\net6.0\FullStackBank.dll
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\obj\Debug\net6.0\refint\FullStackBank.dll
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\obj\Debug\net6.0\FullStackBank.pdb
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\obj\Debug\net6.0\FullStackBank.genruntimeconfig.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana4\FullStackBank\obj\Debug\net6.0\ref\FullStackBank.dll

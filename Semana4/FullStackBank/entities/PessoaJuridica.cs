@@ -12,8 +12,8 @@ namespace FullStackBank.entities
         public string RazaoSocial { get; set; }
         public string InscricaoEstadual { get; set; }
 
-        public PessoaJuridica(string nome, string telefone, string endereco, 
-            string cNPJ, string razaoSocial, string inscricaoEstadual) : base(nome, telefone, endereco)
+        public PessoaJuridica(string nome, string telefone, string endereco, int numeroConta,
+            string cNPJ, string razaoSocial, string inscricaoEstadual) : base(nome, telefone, endereco, numeroConta)
         {
             CNPJ = cNPJ;
             RazaoSocial = razaoSocial;

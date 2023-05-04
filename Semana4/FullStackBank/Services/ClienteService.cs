@@ -10,14 +10,15 @@ namespace FullStackBank.Services
 {
     internal class ClienteService : IClienteService
     {
-        List<Cliente> clientes = new List<Cliente>;
+        List<Cliente> clientes = new List<Cliente>();
 
-        public void CriaConta()
+        public void CriarConta()
         {
+            Console.WriteLine("\n");
             Console.WriteLine("Qual o tipo de conta, pessoa fisica(pf) ou pessoa juridica(pj)?");
             string tipoConta = Console.ReadLine();
-            if (tipoConta == "pf") { }
-            if (tipoConta == "pj") { }
+            if (tipoConta == "pf") { CadastroPF(); }
+            else if (tipoConta == "pj") { CadastroPJ(); }
 
             else Console.WriteLine("Opção inválida");
         }
@@ -25,6 +26,8 @@ namespace FullStackBank.Services
         public void CadastroPF()
         {
             Console.WriteLine("Entre com os  dados do Cliente Pessoa Fisica:");
+            Console.WriteLine("Numero Conta:");
+            int numeroConta = int.Parse(Console.ReadLine());
             Console.WriteLine("Nome Completo:");
             string nome = Console.ReadLine();
             Console.WriteLine("Telefone: ");
@@ -34,13 +37,15 @@ namespace FullStackBank.Services
             Console.WriteLine("CPF: ");
             string cpf = Console.ReadLine();
 
-            clientes.Add(new PessoaFisica(nome, telefone, endereco, cpf));
+            clientes.Add(new PessoaFisica(nome, telefone, endereco, numeroConta, cpf));
 
 
         }
         public void CadastroPJ() 
         {
             Console.WriteLine("Entre com os  dados do Cliente Pessoa Juridica:");
+            Console.WriteLine("Numero Conta:");
+            int numeroConta = int.Parse(Console.ReadLine());
             Console.WriteLine("Nome Completo:");
             string nome = Console.ReadLine();
             Console.WriteLine("Telefone: ");
@@ -54,18 +59,21 @@ namespace FullStackBank.Services
             Console.WriteLine("Inscrição Estadual: ");
             string inscricaoEstadual = Console.ReadLine();
 
-            clientes.Add(new PessoaJuridica(nome, telefone, endereco, cNPJ, razaoSocial, inscricaoEstadual));
+            clientes.Add(new PessoaJuridica(nome, telefone, endereco, numeroConta, cNPJ, razaoSocial, inscricaoEstadual));
         }
 
-        public Cliente BuscaClientePorNumeroDeConta(int numeroConta)
+        public Cliente BuscarClientePorNumeroDeConta(int numeroConta)
         {           
             foreach (var cliente in clientes)
             {
                 if (cliente.NumeroConta == numeroConta)
                 {
+                    cliente.ResumoCliente();
                     return cliente;
                 }
+               
             }
+            Console.WriteLine("Cliente não encontrado!");
             return null;
         }
         public void ExibirClientes()
@@ -73,8 +81,7 @@ namespace FullStackBank.Services
 
             foreach (var cliente in clientes)
             {
-
-                Console.WriteLine(cliente.ToString());
+                cliente.ResumoCliente();
 
             }
         }

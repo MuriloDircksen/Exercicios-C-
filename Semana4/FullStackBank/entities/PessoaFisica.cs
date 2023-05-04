@@ -11,9 +11,9 @@ namespace FullStackBank.entities
 
         public string Cpf { get; }
 
-        public PessoaFisica() { }
+       
     
-        public PessoaFisica(string nome, string telefone, string endereco, string cpf) : base(nome, telefone,  endereco)
+        public PessoaFisica(string nome, string telefone, string endereco, int numeroConta, string cpf) : base(nome, telefone,  endereco, numeroConta)
         {
             Cpf = cpf;
         }

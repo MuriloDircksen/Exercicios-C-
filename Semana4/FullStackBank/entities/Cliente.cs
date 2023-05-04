@@ -24,15 +24,11 @@ namespace FullStackBank.entities
         public decimal Saldo { get; set; }
         public string Endereco { get; set; }
 
-        public Cliente()
-        {
 
-        }
-
-        protected Cliente(string nome, string telefone, string endereco)
+        protected Cliente(string nome, string telefone, string endereco, int numeroConta)
         {
             Nome = nome;
-            NumeroConta += 1;
+            NumeroConta  = numeroConta;
             Telefone = telefone;
             Endereco = endereco;
         }
