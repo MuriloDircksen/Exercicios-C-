@@ -19,5 +19,10 @@ namespace FullStackBank.entities
             RazaoSocial = razaoSocial;
             InscricaoEstadual = inscricaoEstadual;
         }
+
+        public override void ResumoCliente()
+        {
+            Console.WriteLine($"Numero da Conta: {NumeroConta}, Razão Social: {RazaoSocial}, CNPJ: {CNPJ}");
+        }
     }
 }
