@@ -17,14 +17,13 @@ namespace FullStackBank.Services
             string tipoConta = Console.ReadLine();
             if (tipoConta == "pf") { }
             if (tipoConta == "pj") { }
-            
-            else  Console.WriteLine("Opção inválida"); 
+
+            else Console.WriteLine("Opção inválida");
         }
 
         public void CadastroPF()
         {
-            //string nome, int numeroConta, string telefone, decimal saldo, string endereco, string cpf
-            Console.WriteLine("Entre com os  dados do Cliente:");
+            Console.WriteLine("Entre com os  dados do Cliente Pessoa Fisica:");
             Console.WriteLine("Nome Completo:");
             string nome = Console.ReadLine();
             Console.WriteLine("Telefone: ");
@@ -38,11 +37,28 @@ namespace FullStackBank.Services
 
 
         }
-        public void CadastroPJ() { }
+        public void CadastroPJ() 
+        {
+            Console.WriteLine("Entre com os  dados do Cliente Pessoa Juridica:");
+            Console.WriteLine("Nome Completo:");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Telefone: ");
+            string telefone = Console.ReadLine();
+            Console.WriteLine("Endereço: ");
+            string endereco = Console.ReadLine();
+            Console.WriteLine("CNPJ: ");
+            string cNPJ = Console.ReadLine();
+            Console.WriteLine("Razão Social: ");
+            string razaoSocial = Console.ReadLine();
+            Console.WriteLine("Inscrição Estadual: ");
+            string inscricaoEstadual = Console.ReadLine();
+
+            clientes.Add(new PessoaJuridica(nome, telefone, endereco, cNPJ, razaoSocial, inscricaoEstadual));
+        }
 
         public void BuscaClientePorNumeroDeConta(int numeroConta)
         {
-            
+
             foreach (var cliente in clientes)
             {
                 if (cliente.NumeroConta == numeroConta)
@@ -56,9 +72,9 @@ namespace FullStackBank.Services
 
             foreach (var cliente in clientes)
             {
-                
+
                 Console.WriteLine(cliente.ToString());
-                
+
             }
         }
     }
