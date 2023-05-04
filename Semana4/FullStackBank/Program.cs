@@ -36,7 +36,7 @@ namespace FullStackBank
                         break;
                 }
                 Console.WriteLine("\n");
-            } while (opcao != "6");
+            } while (opcao != "4");
            
         }
     }
