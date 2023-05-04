@@ -24,5 +24,10 @@ namespace FullStackBank.entities
            
             return false;
         }
+
+        public override void ResumoCliente()
+        {
+            Console.WriteLine($"Numero da Conta: {NumeroConta}, Nome: {Nome}, CPF: {Cpf}");
+        }
     }
 }

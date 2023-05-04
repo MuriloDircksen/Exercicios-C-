@@ -37,7 +37,7 @@ namespace FullStackBank.entities
             Endereco = endereco;
         }
 
-        public void ResumoCliente()
+        public virtual void ResumoCliente()
         {
             Console.WriteLine($"Nome: {Nome}, Numero da Conta: {NumeroConta}, " +
                 $"Telefone: {Telefone}\n, Saldo: {Saldo.ToString("C2")}, Endereço: {Endereco}");
