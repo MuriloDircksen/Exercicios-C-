@@ -1,4 +1,5 @@
 ﻿using FullStackBank.entities;
+using FullStackBank.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FullStackBank.Services
 {
-    internal class ClienteService
+    internal class ClienteService : IClienteService
     {
         List<Cliente> clientes = new List<Cliente>;
 
@@ -56,16 +57,16 @@ namespace FullStackBank.Services
             clientes.Add(new PessoaJuridica(nome, telefone, endereco, cNPJ, razaoSocial, inscricaoEstadual));
         }
 
-        public void BuscaClientePorNumeroDeConta(int numeroConta)
-        {
-
+        public Cliente BuscaClientePorNumeroDeConta(int numeroConta)
+        {           
             foreach (var cliente in clientes)
             {
                 if (cliente.NumeroConta == numeroConta)
                 {
-                    Console.WriteLine(cliente.ToString());
+                    return cliente;
                 }
             }
+            return null;
         }
         public void ExibirClientes()
         {
