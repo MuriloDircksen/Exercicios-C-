@@ -16,5 +16,13 @@ namespace ExJunitTests
             int sumExpected = 10;
             Assert.AreEqual(sumExpected, sum);
         }
+        [Test]
+        public void Test2()
+        {
+            List<int> list = new List<int>() { 1, 7, -3, 4, 6 };
+            List<int> reverse = Calculator.Reverse(list);
+            List<int> reverseExpected = new List<int> { 6,4,-3,7,1};
+            Assert.AreEqual(reverseExpected, reverse);
+        }
     }
 }
