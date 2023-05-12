@@ -1,0 +1,15 @@
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\bin\Debug\net6.0\ExJunit.exe
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\bin\Debug\net6.0\ExJunit.deps.json
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\bin\Debug\net6.0\ExJunit.runtimeconfig.json
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\bin\Debug\net6.0\ExJunit.dll
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\bin\Debug\net6.0\ExJunit.pdb
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\obj\Debug\net6.0\ExJunit.csproj.AssemblyReference.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\obj\Debug\net6.0\ExJunit.GeneratedMSBuildEditorConfig.editorconfig
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\obj\Debug\net6.0\ExJunit.AssemblyInfoInputs.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\obj\Debug\net6.0\ExJunit.AssemblyInfo.cs
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\obj\Debug\net6.0\ExJunit.csproj.CoreCompileInputs.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\obj\Debug\net6.0\ExJunit.dll
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\obj\Debug\net6.0\refint\ExJunit.dll
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\obj\Debug\net6.0\ExJunit.pdb
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\obj\Debug\net6.0\ExJunit.genruntimeconfig.cache
+D:\Murilo\ws_visualstudio\DevinHouseAudaces\Exercicios\Semana6\ExJunit\obj\Debug\net6.0\ref\ExJunit.dll

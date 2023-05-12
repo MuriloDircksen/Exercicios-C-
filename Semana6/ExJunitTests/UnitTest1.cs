@@ -1,3 +1,4 @@
+using ExJunit;
 namespace ExJunitTests
 {
     public class Tests
@@ -10,7 +11,10 @@ namespace ExJunitTests
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+            List<int> list = new List<int>() { 1,2,-3,4,6};
+            int sum = Calculator.Sum(list);
+            int sumExpected = 10;
+            Assert.AreEqual(sumExpected, sum);
         }
     }
 }
