@@ -24,5 +24,13 @@ namespace ExJunitTests
             List<int> reverseExpected = new List<int> { 6,4,-3,7,1};
             Assert.AreEqual(reverseExpected, reverse);
         }
+        [Test]
+        public void Test3()
+        {
+            List<int> list = new List<int>() { 1, 7, -3, 4, 6 };
+            List<int> order = Calculator.Order(list);
+            List<int> orderExpected = new List<int> { -3, 1, 4, 6, 7 };
+            Assert.AreEqual(orderExpected, order);
+        }
     }
 }
