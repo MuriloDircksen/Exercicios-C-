@@ -4,7 +4,7 @@ namespace FilmesApi.Models
 {
     public class Filme
     {
-        //[Key] sempre que o id for o primeiro item e ter nome id, já reconhece automatico
+        //[Key] sempre que o id for o primeiro item e ter nome id, já reconhece automatico        
         public int Id { get; set; }
 
         [Required(ErrorMessage= "Campo nome de preenchimento obigatório!")]
@@ -12,9 +12,11 @@ namespace FilmesApi.Models
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Campo diretor de preenchimento obigatório!")]
+        [MaxLength(100, ErrorMessage = "Tamanho máximo de 100 caracteres!")]
         public string Diretor { get; set; }
 
         [Required(ErrorMessage = "Campo genero de preenchimento obigatório!")]
+        [MaxLength(50, ErrorMessage = "Tamanho máximo de 50 caracteres!")]
         public string Genero { get; set; }
 
         [Required(ErrorMessage = "Campo Duração de preenchimento obigatório!")]
