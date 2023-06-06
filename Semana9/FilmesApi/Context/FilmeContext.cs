@@ -8,13 +8,13 @@ namespace FilmesApi.Context
         public FilmeContext()
         {
         }
-        public FilmeContext(DbContextOptions options)
+
+        public FilmeContext(DbContextOptions<FilmeContext> options)
             : base(options)
         {
         }
 
-        public virtual DbSet<Filme> Filmes{ get; set;}
-
+        public virtual DbSet<Filme> Filmes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m132Uaq0lUc2HukZ+w8FYfZG5asJpUy2oOcjl6jUGErvSaXANhvI9i0zb8yWBhx33zIlKPnfE1eK0KduypaE/Q==",
+  "dgSpecHash": "aLrClbly8iZa4nw72pdbYQHOMDp8oEUw2BdxEQycE3+AGvxoydam7CfHV0FANBS922DO0ji5J9Ha+uCpTHlRXQ==",
   "success": true,
-  "projectFilePath": "D:\\Murilo\\ws_visualstudio\\DevinHouseAudaces\\Exercicios\\Semana9\\FilmesApi\\FilmesApi.csproj",
+  "projectFilePath": "D:\\Murilo\\ws_visualstudio\\DevinHouseAudaces\\Exercicios\\Semana9\\FilmeApiCodeFirst\\FilmesApi\\FilmesApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\muril\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\muril\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.16\\microsoft.aspnetcore.jsonpatch.6.0.16.nupkg.sha512",
