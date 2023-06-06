@@ -2476,11 +2476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Murilo\\ws_visualstudio\\DevinHouseAudaces\\Exercicios\\Semana9\\FilmeApiCodeFirst\\FilmesApi\\FilmesApi.csproj",
+      "projectUniqueName": "D:\\Murilo\\ws_visualstudio\\DevinHouseAudaces\\Exercicios\\Semana9\\FilmesApi\\FilmesApi.csproj",
       "projectName": "FilmesApi",
-      "projectPath": "D:\\Murilo\\ws_visualstudio\\DevinHouseAudaces\\Exercicios\\Semana9\\FilmeApiCodeFirst\\FilmesApi\\FilmesApi.csproj",
+      "projectPath": "D:\\Murilo\\ws_visualstudio\\DevinHouseAudaces\\Exercicios\\Semana9\\FilmesApi\\FilmesApi.csproj",
       "packagesPath": "C:\\Users\\muril\\.nuget\\packages\\",
-      "outputPath": "D:\\Murilo\\ws_visualstudio\\DevinHouseAudaces\\Exercicios\\Semana9\\FilmeApiCodeFirst\\FilmesApi\\obj\\",
+      "outputPath": "D:\\Murilo\\ws_visualstudio\\DevinHouseAudaces\\Exercicios\\Semana9\\FilmesApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
