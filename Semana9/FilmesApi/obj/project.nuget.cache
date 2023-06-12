@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "RvYydGSHSGPWUg+xK0Z8mDO/Cux3Rf/j7Wuzg3IJYObS6nYgCmKojUzukdVlZ6ngGf8h+xwn/1266YgKrwcRYA==",
+  "dgSpecHash": "t6/H9o6E+ZcgeZTxESWIsxl2c4LNminZIFM5gZmAzmGtbwiw9oYKEIu9KSLvPj7g0SvgddV03TRc8r0rBiJHhA==",
   "success": true,
   "projectFilePath": "D:\\Murilo\\ws_visualstudio\\DevinHouseAudaces\\Exercicios\\Semana9\\FilmesApi\\FilmesApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\muril\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\muril\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\muril\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\muril\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.16\\microsoft.aspnetcore.jsonpatch.6.0.16.nupkg.sha512",

@@ -1,4 +1,6 @@
-﻿using FilmesApi.Context;
+﻿using AutoMapper;
+using FilmesApi.Context;
+using FilmesApi.DTO;
 using FilmesApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -46,8 +48,13 @@ namespace FilmesApi.Controllers
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
-        public async Task<IActionResult> Post([FromBody] FilmeDiretor filmesDiretor)
+        public async Task<ActionResult<FilmeDiretor>> Post([FromBody] FilmeDiretorDTO filmesDiretorDto)
         {
+            var configuration = new MapperConfiguration( cfg => cfg.CreateMap<FilmeDiretorDTO, FilmeDiretor>());
+            //criando um mapeamento da classe Filme diretor pela classe FilemDiretorDTO
+
+            var mapper = configuration.CreateMapper(); //cria o mapeamento
+            FilmeDiretor filmesDiretor = mapper.Map<FilmeDiretor>(filmesDiretorDto);
             _context.FilmeDiretores.Add(filmesDiretor);
 
             await _context.SaveChangesAsync();
