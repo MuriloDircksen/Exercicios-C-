@@ -21,6 +21,29 @@ namespace FilmesApi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("FilmesApi.Models.Diretor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Telefone")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Diretores");
+                });
+
             modelBuilder.Entity("FilmesApi.Models.Filme", b =>
                 {
                     b.Property<int>("Id")
@@ -48,6 +71,48 @@ namespace FilmesApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Filmes");
+                });
+
+            modelBuilder.Entity("FilmesApi.Models.FilmeDiretor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("IdDiretor")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdFilme")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdDiretor");
+
+                    b.HasIndex("IdFilme");
+
+                    b.ToTable("FilmeDiretores");
+                });
+
+            modelBuilder.Entity("FilmesApi.Models.FilmeDiretor", b =>
+                {
+                    b.HasOne("FilmesApi.Models.Diretor", "Diretor")
+                        .WithMany()
+                        .HasForeignKey("IdDiretor")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FilmesApi.Models.Filme", "Filme")
+                        .WithMany()
+                        .HasForeignKey("IdFilme")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Diretor");
+
+                    b.Navigation("Filme");
                 });
 #pragma warning restore 612, 618
         }

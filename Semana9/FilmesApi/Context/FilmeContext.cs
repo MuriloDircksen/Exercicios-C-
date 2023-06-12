@@ -5,6 +5,10 @@ namespace FilmesApi.Context
 {
     public class FilmeContext : DbContext
     {
+        public virtual DbSet<Filme> Filmes { get; set; }
+        public virtual DbSet<Diretor> Diretores { get; set; }
+        public virtual DbSet<FilmeDiretor> FilmeDiretores { get; set; }
+
         public FilmeContext()
         {
         }
@@ -13,8 +17,7 @@ namespace FilmesApi.Context
             : base(options)
         {
         }
-
-        public virtual DbSet<Filme> Filmes { get; set; }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

@@ -4,7 +4,7 @@ namespace FilmesApi.Models
 {
     public class Filme
     {
-        //[Key] sempre que o id for o primeiro item e ter nome id, já reconhece automatico
+        //[Key] //sempre que o id for o primeiro item e ter nome id, já reconhece automatico
         public int Id { get; set; }
 
         [Required(ErrorMessage= "Campo nome de preenchimento obigatório!")]

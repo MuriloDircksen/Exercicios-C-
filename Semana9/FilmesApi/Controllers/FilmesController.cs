@@ -1,5 +1,7 @@
-﻿using FilmesApi.Models;
+﻿using FilmesApi.Context;
+using FilmesApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography.X509Certificates;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,7 +14,15 @@ namespace FilmesApi.Controllers
     [ApiController]
     public class FilmesController : ControllerBase
     {
+        private readonly FilmeContext _filmeContext;
+        public FilmesController(FilmeContext filmeContext)
+        {
+            _filmeContext = filmeContext;
+        }
+
+
         // GET: api/<FilmesController>
+
         /// <summary>
         /// Recupera uma lista de filmes do banco de dados
         /// </summary>
@@ -20,9 +30,10 @@ namespace FilmesApi.Controllers
         /// <response code="200">Com a lista de filmes presentes na base de dados</response>
         [ProducesResponseType(StatusCodes.Status200OK)] //configurações do endpoint obrigatorio
         [HttpGet]
-        public IEnumerable<Filme> Get()
+        public async Task<IActionResult> Get() // permite que as chamadas não concorram na conexão no banco
         {
-            return MockFilmes.Filmes;
+            var filmes = await _filmeContext.Filmes.ToListAsync().ConfigureAwait(true);
+            return Ok(filmes); 
         }
 
         // GET api/<FilmesController>/5
@@ -36,9 +47,11 @@ namespace FilmesApi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpGet("{id}")]
-        public IActionResult Get(int id) //representa as definições de status code que retorna no endpoint
+        public async Task<IActionResult> Get(int id) //representa as definições de status code que retorna no endpoint
         {
-            Filme filme = MockFilmes.Filmes.FirstOrDefault(x=> x.Id == id);
+            Filme? filme = await _filmeContext.Filmes
+                .FirstOrDefaultAsync(x=> x.Id == id)
+                .ConfigureAwait(true);
 
             if (filme == null)
             {
@@ -57,9 +70,10 @@ namespace FilmesApi.Controllers
         /// <response code="201">Caso inserção seja feita com sucesso</response>
         [ProducesResponseType(StatusCodes.Status201Created)]
         [HttpPost]
-        public IActionResult Post([FromBody] Filme filme)
+        public async Task<IActionResult> Post([FromBody] Filme filme)
         {
-            MockFilmes.Filmes.Add(filme);
+            _filmeContext.Filmes.Add(filme);
+            await _filmeContext.SaveChangesAsync();
 
             return CreatedAtAction(nameof(Get), new {id = filme.Id}, filme);
         }
@@ -76,19 +90,19 @@ namespace FilmesApi.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Filme value)
+        public async Task<IActionResult> Put(int id, [FromBody] Filme filme)
         {
-            Filme filme = MockFilmes.Filmes.FirstOrDefault(x => x.Id == id);
+            bool existeFilme= await _filmeContext.Filmes
+                .AnyAsync(x => x.Id == id)
+                .ConfigureAwait(true); //verifica se o id existe no servidor
 
-            if(filme is null)
+            if(!existeFilme)
             {
                 return NotFound();
             }
-            var index = MockFilmes.Filmes.IndexOf(filme);
-            if(index != -1)
-            {
-                MockFilmes.Filmes[index] = value;
-            }
+            _filmeContext.Entry(filme).State = EntityState.Modified; // faz a alteração na base de dados
+            await _filmeContext.SaveChangesAsync();
+
             return NoContent();
         }
 
@@ -103,16 +117,19 @@ namespace FilmesApi.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            Filme filmeUpdate = MockFilmes.Filmes.FirstOrDefault(x=> x.Id == id);
+            var filmeUpdate = await _filmeContext.Filmes
+                .FirstOrDefaultAsync(x=> x.Id == id)
+                .ConfigureAwait(true);
 
             if(filmeUpdate is null)
             {
                 return NotFound();
             }
 
-            MockFilmes.Filmes.Remove(filmeUpdate);
+            _filmeContext.Filmes.Remove(filmeUpdate);
+            await _filmeContext.SaveChangesAsync();
             return NoContent();
         }
     }
